@@ -55,14 +55,18 @@
 		<header class="">
 
 			<nav role="navigation">
-		        <div class="navbar navbar-default navbar-fixed-top">
-		          	<div class="container">
-		            
-						<div class="navbar-header">
-							<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
-								<i class="fa fa-bars"></i>
-								Menu
-							</button>
+				<div class="nav_menu-toggle">
+					<div class="container-fluid">
+						<button type="button" class="bar_toggle js-toggle-menu">
+							Menu 	<i class="fa fa-bars"></i>
+						</button>
+					</div>
+				</div>
+		        <div class="navbar navbar-fixed-top">
+		          	<div class="container-fluid">
+		            	
+						<div class="nav_bar">
+							
 
 							<?php if ( ( '' != $tpb_options['site_logo']['url'] ) ) {
 								$logo_url = $tpb_options['site_logo']['url'];
@@ -73,19 +77,42 @@
 
 
 							if ( is_ssl() ) $logo_url = str_replace( 'http://', 'https://', $logo_url );
-							echo '<a class="navbar-brand" href="' . esc_url( $site_url ) . '" title="' . esc_attr( $site_description ) . '"><img class="img-responsive" src="'.$logo_url.'" alt="'.esc_attr($site_name).'"/></a>' . "\n";
+							echo '<a class="logo-symbol" href="' . esc_url( $site_url ) . '" title="' . esc_attr( $site_description ) . '"><img class="img-responsive" src="'.$logo_url.'" alt="'.esc_attr($site_name).'"/></a>' . "\n";
+							
+							?>
+							<?php if ( ( '' != $tpb_options['site_word_logo']['url'] ) ) {
+								$logo_url = $tpb_options['site_word_logo']['url'];
+								$site_url = get_bloginfo('url');
+								$site_name = get_bloginfo('name');
+								$site_description = get_bloginfo('description');
+							}// End IF Statement */
+
+
+							if ( is_ssl() ) $logo_url = str_replace( 'http://', 'https://', $logo_url );
+							echo '<a class="logo-word" href="' . esc_url( $site_url ) . '" title="' . esc_attr( $site_description ) . '"><img class="img-responsive" src="'.$logo_url.'" alt="'.esc_attr($site_name).'"/></a>' . "\n";
 							
 							?>
 						</div>
 
-
-						<div class="navbar-collapse collapse navbar-responsive-collapse">
-							
-							<?php bones_main_nav(); ?>
-							
-						</div>
 					</div>
 				</div> 
+				<div class="header_nav">
+		    		<nav class="container-fluid">
+		    			<?php if ( ( '' != $tpb_options['site_logo']['url'] ) ) {
+							$logo_url = $tpb_options['site_logo']['url'];
+							$site_url = get_bloginfo('url');
+							$site_name = get_bloginfo('name');
+							$site_description = get_bloginfo('description');
+						}// End IF Statement */
+
+
+						if ( is_ssl() ) $logo_url = str_replace( 'http://', 'https://', $logo_url );
+						echo '<a class="logo-symbol" href="' . esc_url( $site_url ) . '" title="' . esc_attr( $site_description ) . '"><img class="img-responsive" src="'.$logo_url.'" alt="'.esc_attr($site_name).'"/></a>' . "\n";
+						
+						?>
+			    		<?php bones_main_nav(); ?>
+			    	</nav>
+			    </div>
 
 		    </nav>
 

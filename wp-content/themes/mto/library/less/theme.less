@@ -312,7 +312,7 @@ button.trigger span::before {
 
 .section_page {
 	.section_page--inner {
-		padding: 5em 0;
+		padding: 100px 0;
 	}
 	height: 100vh;
 	position: relative;
@@ -350,14 +350,14 @@ button.trigger span::before {
 
 .affix {
   position: fixed !important;
-  top: 5em;
+  top: 170px;
   width: 220px;
 }
 
 @media screen and (min-width: 992px) {
 	.sidenav {
 		width: 15%;
-		margin-left: 5%;
+		margin-left:11%;
 		z-index: 999;
   }
 }
@@ -366,7 +366,7 @@ button.trigger span::before {
 
 }
 .affix-top {
-    top: 5em;
+    top: 110px;
     position: absolute;
     z-index: 9999;
 }
@@ -374,4 +374,48 @@ button.trigger span::before {
   position: absolute;
   //top: auto;
   //bottom: 620px;
+}
+
+.navbar {
+	padding: 35px 0;
+	
+}
+
+.bar_toggle {
+	text-align: right;
+	font-size: 24px;
+	background: none;
+	border:none;
+	.pull-right();
+	z-index: 1200;
+}
+
+.nav_menu-toggle {
+	position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1300;
+    padding: 35px 0;
+}
+
+.header_nav {
+	position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1100;
+    padding: 35px 0;
+    .transition(0.8s);
+
+    .home & {
+    	.translate(0,-100%);
+    }
+
+    .open-menu & {
+    	background: #fff;
+    	.translate(0,0%);
+    }
+}
+
+.logo-symbol,.logo-word {
+	float: left;
 }

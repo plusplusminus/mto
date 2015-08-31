@@ -140,6 +140,7 @@
 })();
 
 
+
 jQuery(document).ready(function(){
 
     //select a referenced box for bottom alignment
@@ -151,13 +152,19 @@ jQuery(document).ready(function(){
     var bottomOffLine = jQuery(document).height() - bottomReferenceBox.offset().top - bottomReferenceBox.outerHeight();
 
 
-    var topOffLine = topReferenceBox.offset().top + topReferenceBox.outerHeight();
+    var topOffLine = topReferenceBox.offset().top + topReferenceBox.outerHeight() - 60;
     console.log(topOffLine);
     jQuery('.affix').affix({
     offset: {
     top: topOffLine,
     bottom: bottomOffLine
     }
+    })
+
+    jQuery('.js-toggle-menu').on('click',function(e){
+        e.preventDefault();
+
+        jQuery('body').toggleClass('open-menu');
     })
 
 })
