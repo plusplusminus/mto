@@ -405,7 +405,7 @@ button.trigger span::before {
 
 .bar_toggle {
 	text-align: right;
-	font-size: 24px;
+	font-size: @font-size-base;
 	background: none;
 	border:none;
 	.pull-right();
@@ -445,31 +445,32 @@ button.trigger span::before {
 	float: left;
 }
 
-.navbar-default{
+.navbar-fixed-top{
+}
+.header_nav{
 	background: #fff;
 	border-bottom: 1px solid #f6f6f6;
-	.nav_primary{
-		&.navbar-nav{
-			&>li.menu-item{
-				text-transform: uppercase;
-				font-size: @font-size-small;
+	.navbar-nav{
+		&>li.menu-item{
+			text-transform: uppercase;
+			font-size: @font-size-small;
+			color: @gray-dark;
+			font-weight: 700;
+			.letter-spacing();
+			&>a{
 				color: @gray-dark;
-				font-weight: 700;
-				.letter-spacing();
-				&>a{
-					color: @gray-dark;
-					&:hover{
-						color: @brand-primary;
-					}
-
+				&:hover{
+					color: @brand-primary;
+					background: #fff;
 				}
+
 			}
-			&>.active>a,
-			&>.active>a:hover,
-			&>.active>a:focus{
-				color: @brand-primary;
-				background: none;
-			}
+		}
+		&>.active>a,
+		&>.active>a:hover,
+		&>.active>a:focus{
+			color: @brand-primary;
+			background: none;
 		}
 	}
 }
