@@ -41,11 +41,8 @@
 		<meta name="theme-color" content="#222222">
 
         <!-- Typekit -->
-        <script src="//use.typekit.net/chb1ynt.js"></script>
-        <script>try{Typekit.load({ async: true });}catch(e){}</script>
-        
-        <!-- Google fonts -->
-        <link href='https://fonts.googleapis.com/css?family=Crimson+Text:400italic' rel='stylesheet' type='text/css'>
+		<script src="//use.typekit.net/efy3cnh.js"></script>
+		<script>try{Typekit.load({ async: true });}catch(e){}</script>
 
 		<?php wp_head(); ?>
 
