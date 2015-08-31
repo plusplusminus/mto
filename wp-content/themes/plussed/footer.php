@@ -48,6 +48,8 @@
 
     </footer> <!-- end footer -->
 
+    
+
     <!-- all js scripts are loaded in library/bones.php -->
     <?php wp_footer(); ?>
     <script src="//localhost:35729/livereload.js"></script>

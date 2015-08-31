@@ -59,8 +59,8 @@
 							<div class="row">
 								<div class="col-md-9 col-md-offset-3">
 									<h3><?php the_title(); ?></h3>
-									<?php the_content(); ?>
-									<a class="more_link" href="#">Find out more <i class="fa fa-chevron-right"></i></a>
+									<?php the_excerpt(); ?>
+									<a class="more_link js-overlay-link"  href="<?php the_permalink(); ?>">Find out more <i class="fa fa-chevron-right"></i></a>
 								</div>
 							</div>
 							<div class="stamp">

@@ -166,4 +166,24 @@ jQuery(document).ready(function(){
         jQuery('body').toggleClass('open-menu');
     })
 
+    jQuery(document).on('click','.js-overlay-link',function(e) {
+        
+        e.preventDefault();
+
+        jQuery('#content-modal').modal('show');
+
+        var overlay = jQuery('#content-modal');
+
+        var area = jQuery(overlay).find('.modal-body').empty();
+
+        var toLoad = jQuery(this).attr('href') + ' .js-article > *';
+
+        jQuery(area).load(toLoad,function(){
+            
+        });
+
+        return false;
+
+    });
+
 })

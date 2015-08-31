@@ -66,10 +66,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
 	-webkit-transform: translateX(-50%) translateY(-60%);
 	transform: translateX(-50%) translateY(-60%);
 
-	.modify & {
-		-webkit-transform: translateX(-50%) translateY(160%);
-		transform: translateX(-50%) translateY(160%);
-	}
+	
 }
 
 .title h1 {
@@ -80,6 +77,10 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
     text-align: center;
     background: #222;
 	opacity: 0.8;
+	.transition(0.1s)
+	.modify & {
+		opacity: 0;
+	}
 }
 
 
