@@ -23,7 +23,7 @@
 						<h2>What Sets MTO Apart?</h2>
 					</div>
 					<div class="col-md-9">
-						<p class="lead">We may define a food to be any substance which will repair the functional waste of the body, increase its growth, or maintain the heat, muscular, and nervous energy. </p>
+						<p class="lead">The MTO forestry group is built on solid foundations, with a renewed focus to reposition as a leading Pan-African timber product and solutions provider.</p>
 					</div>
 				</div>
 			</div>
