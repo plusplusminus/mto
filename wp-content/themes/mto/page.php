@@ -1,7 +1,19 @@
 <?php get_header(); ?>
 
-	<?php get_template_part('templates/top','page-header'); ?>
+	<div class="single_page">
+		<div class="container">
+		<div class="row">
+			<div class="col-md-8">
+				<article class="page_article">
+					<h1 class="page_article--title"><?php the_title(); ?></h1>
+					<div class="article_entry">
+						<?php the_content(); ?>
+					</div>
+				</article>
+			</div>
+			<?php get_sidebar(); ?>
+		</div>
 
-	<?php get_template_part('templates/section','page-content'); ?>
+	</div>
 
 <?php get_footer(); ?>

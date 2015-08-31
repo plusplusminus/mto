@@ -3,11 +3,16 @@ html, body, .wrapper, .header {
 }
 
 body {
-	background: @brand-primary;
 	position: relative;
 	-webkit-font-smoothing: antialiased;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
+
+	padding-top:160px;
+
+	&.home {
+		padding-top: 0;
+	}
 }
 
 .letter-spacing{
@@ -403,10 +408,11 @@ button.trigger span::before {
 
 .nav_menu-toggle {
 	position: fixed;
-    top: 0;
-    width: 100%;
+    top: 20px;
+    width: auto;
     z-index: 1300;
     padding: 35px 0;
+    right: 0;
 }
 
 .header_nav {
@@ -416,6 +422,7 @@ button.trigger span::before {
     z-index: 1100;
     padding: 35px 0;
     .transition(0.8s);
+    .translate(0,0%);
 
     .home & {
     	.translate(0,-100%);
@@ -525,5 +532,10 @@ button.trigger span::before {
 		text-align: center;
 		font-size: @font-size-base;
 	}
+}
+
+.single_page {
+	margin: 65px 0 ;
+	background: #fff;
 }
 
