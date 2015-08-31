@@ -9,9 +9,9 @@
 					<?php while ( have_posts() ) : the_post(); ?>
 				
 					<article class="page_article js-article">
-						<h1 class="page_article--title"><?php the_title(); ?></h1>
+						<h1 class="page_article--title page-<?php echo $post->ID;?>"><?php the_title(); ?></h1>
 					
-						<div class="article_entry">
+						<div class="article_entry page-<?php echo $post->ID;?>">
 							<?php the_content(); ?>
 						</div>
 					</article>
