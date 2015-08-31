@@ -5,6 +5,13 @@ html, body, .wrapper, .header {
 body {
 	background: @brand-primary;
 	position: relative;
+	-webkit-font-smoothing: antialiased;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.letter-spacing{
+	letter-spacing: 0.1em;
 }
 /* Header */
 .header {
@@ -47,7 +54,7 @@ body {
 
 .title h1 {
 	color: #fff;
-    font-weight: 700;
+    font-weight: 400;
     font-size: 2em;
     margin: 0 auto;
     text-align: center;
@@ -258,6 +265,10 @@ button.trigger span::before {
 	opacity: 0;
 	-webkit-transform: translateY(150px);
 	transform: translateY(150px);
+	.lead{
+		font-weight: 100;
+		font-size: 1.8em;
+	}
 }
 
 .intro-effect-jam3.modify .subline {
@@ -419,3 +430,100 @@ button.trigger span::before {
 .logo-symbol,.logo-word {
 	float: left;
 }
+
+.navbar-default{
+	background: #fff;
+	border-bottom: 1px solid #f6f6f6;
+	.nav_primary{
+		&.navbar-nav{
+			&>li.menu-item{
+				text-transform: uppercase;
+				font-size: @font-size-small;
+				color: @gray-dark;
+				font-weight: 700;
+				.letter-spacing();
+				&>a{
+					color: @gray-dark;
+					&:hover{
+						color: @brand-primary;
+					}
+
+				}
+			}
+			&>.active>a,
+			&>.active>a:hover,
+			&>.active>a:focus{
+				color: @brand-primary;
+				background: none;
+			}
+		}
+	}
+}
+
+.sidenav{
+	.sidenav_title{
+		text-transform: uppercase;
+		color: @gray-dark;
+		.letter-spacing();
+	}
+	.sidenav_menu{
+		padding-left: 0px;
+		list-style-position: inside;
+		.menu_item{
+			color: @brand-light;
+			border-bottom: 1px solid #49beb1;
+			.letter-spacing();
+			a{
+				text-decoration: none;
+				color: @brand-light;
+				padding: 8px 0;
+				display: inline-block;
+				font-weight: 400;
+				&:hover{
+					color: #fff;
+					font-weight: 700;
+				}
+			}
+			&:hover{
+				color: #fff;
+			}
+		}
+	}
+}
+
+.more_link{
+	color: #fff;
+	font-weight: 700;
+	text-decoration: none;
+	.letter-spacing();
+	.fa{
+		font-size: @font-size-small;
+	}
+	&:hover{
+		text-decoration: none;
+	}
+}
+
+.footer_primary{
+	padding-top: 40px;
+	padding-bottom: 40px;
+	color: #fff;
+	font-size: @font-size-small;
+	font-weight: 400;
+	background: url(../images/logo-watermark.png) center center no-repeat;
+	background-color: @brand-success;
+	a{
+		color: #fff;
+	}
+	p{
+		margin-bottom: 0px;
+	}
+	.primary_attribution{
+		text-align: right;
+	}
+	.primary_slogan{
+		text-align: center;
+		font-size: @font-size-base;
+	}
+}
+

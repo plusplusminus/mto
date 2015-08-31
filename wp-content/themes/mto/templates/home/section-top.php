@@ -57,7 +57,7 @@
 								<div class="col-md-9 col-md-offset-3">
 									<h3><?php the_title(); ?></h3>
 									<?php the_content(); ?>
-									
+									<a class="more_link" href="#">Find out more <i class="fa fa-chevron-right"></i></a>
 								</div>
 							</div>
 							<div class="stamp">
@@ -70,8 +70,8 @@
 			<?php endwhile; ?>
 
 			<div id="sidebar-nav" class="sidenav affix" >
-				<h4>Overview</h4>
-				<ul>
+				<h5 class="sidenav_title">Overview</h5>
+				<ul class="sidenav_menu">
 					<?php echo $menu_item; ?>
 				</ul>
 			</div>
