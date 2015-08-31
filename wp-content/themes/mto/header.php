@@ -64,19 +64,6 @@
 		            	
 						<div class="nav_bar">
 							
-
-							<?php if ( ( '' != $tpb_options['site_logo']['url'] ) ) {
-								$logo_url = $tpb_options['site_logo']['url'];
-								$site_url = get_bloginfo('url');
-								$site_name = get_bloginfo('name');
-								$site_description = get_bloginfo('description');
-							}// End IF Statement */
-
-
-							if ( is_ssl() ) $logo_url = str_replace( 'http://', 'https://', $logo_url );
-							echo '<a class="logo-symbol" href="' . esc_url( $site_url ) . '" title="' . esc_attr( $site_description ) . '"><img class="img-responsive" src="'.$logo_url.'" alt="'.esc_attr($site_name).'"/></a>' . "\n";
-							
-							?>
 							<?php if ( ( '' != $tpb_options['site_word_logo']['url'] ) ) {
 								$logo_url = $tpb_options['site_word_logo']['url'];
 								$site_url = get_bloginfo('url');
@@ -89,6 +76,7 @@
 							echo '<a class="logo-word" href="' . esc_url( $site_url ) . '" title="' . esc_attr( $site_description ) . '"><img class="img-responsive" src="'.$logo_url.'" alt="'.esc_attr($site_name).'"/></a>' . "\n";
 							
 							?>
+							
 						</div>
 
 					</div>
