@@ -528,6 +528,48 @@ button.trigger span::before {
 	}
 }
 
+// Page/ Article
+.page_article--title{
+	.letter-spacing();
+	margin-bottom: 40px;
+}
+
+blockquote{
+	color: @brand-success;
+	border-color: @brand-success;
+}
+
+// Widgets
+.widget{
+	margin-bottom: 60px;
+	ul{
+		padding-left: 0px;
+		list-style-position: inside;
+		li{
+			border-bottom: 1px solid @gray-lighter;
+			color: @gray;
+			&:hover{
+				color: @brand-primary;
+			}
+			a{
+				display: block;
+				padding: 8px 0; 
+				color: @gray;
+				&:hover{
+					text-decoration: none;
+					color: @brand-primary;
+				}
+			}
+		}
+	}
+}
+.section_widget--title{
+	text-transform: uppercase;
+	font-size: @font-size-base;
+	font-weight: 700;
+	.letter-spacing();
+}
+
 .footer_primary{
 	padding-top: 40px;
 	padding-bottom: 40px;
