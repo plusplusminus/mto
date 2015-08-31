@@ -135,31 +135,30 @@
         classie.add( container, 'modify' );
     }
     
-    window.addEventListener( 'scroll', scrollPage );
-    trigger.addEventListener( 'click', function() { toggle( 'reveal' ); } );
+    if (trigger) {
+        window.addEventListener( 'scroll', scrollPage );
+        trigger.addEventListener( 'click', function() { toggle( 'reveal' ); } );
+    }
 })();
 
 
 
 jQuery(document).ready(function(){
-
-    //select a referenced box for bottom alignment
-    var bottomReferenceBox = jQuery('.footer');
-
     var topReferenceBox = jQuery('.header');
+    console.log(topReferenceBox);
+    if (topReferenceBox.length > 0) {
+        var bottomReferenceBox = jQuery('.footer');
+        var bottomOffLine = jQuery(document).height() - bottomReferenceBox.offset().top - bottomReferenceBox.outerHeight();
+        var topOffLine = topReferenceBox.offset().top + topReferenceBox.outerHeight() - 60;
 
-    //calculate the bottom position
-    var bottomOffLine = jQuery(document).height() - bottomReferenceBox.offset().top - bottomReferenceBox.outerHeight();
-
-
-    var topOffLine = topReferenceBox.offset().top + topReferenceBox.outerHeight() - 60;
-    console.log(topOffLine);
-    jQuery('.affix').affix({
-    offset: {
-    top: topOffLine,
-    bottom: bottomOffLine
+        jQuery('.affix').affix({
+            offset: {
+            top: topOffLine,
+            bottom: bottomOffLine
+        }
+        })
     }
-    })
+    
 
     jQuery('.js-toggle-menu').on('click',function(e){
         e.preventDefault();
