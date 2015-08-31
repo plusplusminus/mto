@@ -84,6 +84,7 @@
 				<p><?php _e( 'Sorry, no posts matched your criteria.', 'woothemes' ); ?></p>
 			</article><!-- /.post -->
 		<?php endif; // End IF Statement ?> 
+	</article>
 		
 
 

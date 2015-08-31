@@ -224,6 +224,25 @@ function mto_register_metabox() {
         'type'             => 'text',
     ) );
 
+    $hv_meta = new_cmb2_box( array(
+        'id'            => $prefix . 'hv_metabox',
+        'title'         => __( 'Header Video Meta', 'cmb2' ),
+        'object_types'  => array( 'page' ), // Post type
+        'show_on' => array('key'=>'template','value'=>'template-header-video.php'),
+        'context'       => 'normal',
+        'priority'      => 'high',
+        'show_names'    => true, // Show field names on the left
+        // 'cmb_styles' => false, // false to disable the CMB stylesheet
+        // 'closed'     => true, // true to keep the metabox closed by default
+    ) );
+
+    $hv_meta->add_field( array(
+        'name' => 'oEmbed',
+        'desc' => 'Enter a youtube, twitter, or instagram URL. Supports services listed at <a href="http://codex.wordpress.org/Embeds">http://codex.wordpress.org/Embeds</a>.',
+        'id'   => $prefix.'header_video',
+        'type' => 'oembed',
+    ) );
+
     
 
 
