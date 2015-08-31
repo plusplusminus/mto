@@ -1,0 +1,24 @@
+{
+  "name": "leandri-kers",
+  "version": "1.0.0",
+  "description": "Leandri Kers",
+  "main": "gruntfile.js",
+  "scripts": {
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/plusplusminus/leandrikers.git"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.5",
+    "grunt-contrib-less": "~0.11.0",
+    "grunt-contrib-watch": "~0.6.1",
+    "grunt-ftp-deploy": "^0.1.7"
+  },
+  "author": "Sergio Pellegrini",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/plusplusminus/leandrikers/issues"
+  },
+  "homepage": "https://github.com/plusplusminus/leandrikers"
+}
