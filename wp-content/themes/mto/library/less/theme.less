@@ -50,8 +50,10 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
 	top: 0;
 	left: 0;
 	display: block;
-	min-width: 100%;
-	min-height: 100%;
+	@media(min-width:@screen-sm-min) {
+		min-width: 100%;
+		min-height: 100%;
+	}
 }
 
 .title {
@@ -59,10 +61,10 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
 	margin: 0 auto;
 	width: 100%;
 	position: absolute;
-	top: 50%;
+	top: 60%;
 	left: 50%;
-	-webkit-transform: translateX(-50%) translateY(-50%);
-	transform: translateX(-50%) translateY(-50%);
+	-webkit-transform: translateX(-50%) translateY(-60%);
+	transform: translateX(-50%) translateY(-60%);
 }
 
 .title h1 {
@@ -71,7 +73,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
     font-size: 2em;
     margin: 0 auto;
     text-align: center;
-    margin-top: 230px;
+    background: #222;
+	opacity: 0.8;
 }
 
 
@@ -275,8 +278,14 @@ button.trigger span::before {
 .intro-effect-jam3 .header .subline {
 	color: #514753;
 	opacity: 0;
-	-webkit-transform: translateY(150px);
-	transform: translateY(150px);
+	z-index: 1000;
+	margin: 0 auto;
+	width: 100%;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translateX(-50%) translateY(0%);
+	transform: translateX(-50%) translateY(0%);
 	.lead{
 		font-weight: 100;
 		font-size: 1.8em;
@@ -285,8 +294,8 @@ button.trigger span::before {
 
 .intro-effect-jam3.modify .subline {
 	opacity: 1;
-	-webkit-transform: translateY(0);
-	transform: translateY(0);
+	-webkit-transform: translateX(-50%) translateY(-50%);
+	transform: translateX(-50%) translateY(-50%);
 }
 
 

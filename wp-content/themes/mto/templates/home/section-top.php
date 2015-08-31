@@ -6,6 +6,7 @@
 
 	<header class="header">
 		<div class="bg-img">
+		
 			<?php the_post_thumbnail('full',array('class' => 'img-responsive')); ?>
 		</div>
 		
@@ -13,7 +14,10 @@
 			<div class="container">
 			<?php $heading = get_post_meta($post->ID,'_ppm_home_heading',true); ?>
 			<h1><?php echo esc_html($heading);?></h1>
-			<div class="subline">
+			
+		</div>
+		<div class="subline">
+			<div class="container">
 				<div class="row">
 					<div class="col-md-3">
 						<h2>What Sets MTO Apart?</h2>
@@ -22,7 +26,6 @@
 						<p class="lead">We may define a food to be any substance which will repair the functional waste of the body, increase its growth, or maintain the heat, muscular, and nervous energy. </p>
 					</div>
 				</div>
-			</p>
 			</div>
 		</div>
 	</header>
