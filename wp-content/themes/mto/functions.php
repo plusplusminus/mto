@@ -264,8 +264,6 @@ function mto_register_metabox() {
         'type' => 'oembed',
     ) );
 
-    
-
 
 }
 

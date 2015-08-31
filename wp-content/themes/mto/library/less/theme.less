@@ -601,6 +601,7 @@ img.aligncenter{
 		li{
 			border-bottom: 1px solid @gray-lighter;
 			color: @gray;
+			.letter-spacing();
 			&:hover{
 				color: @brand-primary;
 			}
@@ -608,9 +609,18 @@ img.aligncenter{
 				display: block;
 				padding: 8px 0; 
 				color: @gray;
-				&:hover{
+				&:hover,
+				&:focus{
 					text-decoration: none;
 					color: @brand-primary;
+					font-weight: 700;
+				}
+			}
+			&.current-menu-item{
+				color: @brand-primary;
+				a{
+					color: @brand-primary;
+					font-weight: 700;
 				}
 			}
 		}
@@ -647,7 +657,7 @@ img.aligncenter{
 }
 
 .single_page {
-	margin: 65px 0 ;
+	padding: 65px 0 ;
 	background: #fff;
 }
 
@@ -665,6 +675,36 @@ img.aligncenter{
 		.video_inner--content {
 			display: table-cell;
 			vertical-align: middle;
+		}
+	}
+}
+
+.video_inner--content{
+	.btn{
+		color: #fff;
+		.fa:before{
+			width: 80px;
+			height: 80px;
+			border: 2px solid #fff;
+			border-radius: 100%;
+			display: inline-block;
+			padding: 22px;
+		}
+		&:hover{
+			color: @brand-primary !important;
+			.fa:before{
+				border-color: @brand-primary;
+			}
+		}
+	}
+	.more_link{
+		padding: 20px 40px;
+		border-radius: 20px;
+		border: 2px solid #fff;
+		display: inline-block;
+		margin-top: 30px;
+		&:hover{
+			border-color: @brand-primary;
 		}
 	}
 }

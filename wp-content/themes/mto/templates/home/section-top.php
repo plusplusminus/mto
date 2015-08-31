@@ -60,8 +60,9 @@
 						<div class="container">
 							<div class="row">
 								<div class="col-md-9 col-md-offset-3">
+									<?php $pageexcerpt = get_post_meta($post->ID,'_ppm_page_excerpt',true); ?>
 									<h3><?php the_title(); ?></h3>
-									<?php the_excerpt(); ?>
+									<p><?php echo esc_html($pageexcerpt);?></p>
 									<a class="more_link js-overlay-link"  href="<?php the_permalink(); ?>">Find out more <i class="fa fa-chevron-right"></i></a>
 								</div>
 							</div>
@@ -99,8 +100,8 @@
 					<?php $link = get_post_meta($tmp,'_ppm_video_link',true); ?>
 					<?php $about_link = get_post_meta($tmp,'_ppm_about_link',true); ?>
 
-					<a class="btn btn-primary js-overlay-link"  href="<?php echo $link; ?>"><i class="fa fa-play fa-2x"> Watch Our Video</i></a>
-					<a class="more_link"  href="<?php echo $about_link; ?>">Find Out More About Us<i class="fa fa-chevron-right"></i></a>
+					<p><a class="btn btn-link js-overlay-link"  href="<?php echo $link; ?>"><i class="fa fa-play fa-2x"> Watch Our Video</i></a></p>
+					<p><a class="more_link"  href="<?php echo $about_link; ?>">More about MTO <i class="fa fa-chevron-right"></i></a></p>
 				</div>
 			</div>
 		</section> 

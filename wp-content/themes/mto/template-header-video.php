@@ -25,7 +25,7 @@
 					?>
 				</div>
 			</div>
-
+			<br><br>
 
 		<?php endwhile; ?>
 	
@@ -58,12 +58,13 @@
 							<?php the_post_thumbnail('full',array('class' => 'img-responsive')); ?>
 						</a>
 						<div class="caption">
-							<h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+							<h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
 						</div>
 					</div>
 				</div>
 
 			<?php endwhile; ?>
+			</div>
 		<?php endif; ?>
 
 
