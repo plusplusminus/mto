@@ -339,7 +339,7 @@ button.trigger span::before {
 	height: 100vh;
 	position: relative;
 	z-index: 200;
-
+	overflow: hidden;
 	&:nth-child(2n+1) {
 		background: @brand-primary;
 	}
@@ -359,8 +359,8 @@ button.trigger span::before {
 
 	.stamp {
 	    position: absolute;
-	    right: 0;
-	    bottom: 0;
+	    right: -5%;
+	    bottom: -10%;
 	    z-index: -1;
 	}
 }
@@ -405,7 +405,10 @@ button.trigger span::before {
 
 .bar_toggle {
 	text-align: right;
-	font-size: @font-size-base;
+	font-size: 15px;
+	text-transform: uppercase;
+	font-weight: 700;
+	.letter-spacing();
 	background: none;
 	border:none;
 	.pull-right();
@@ -459,7 +462,13 @@ button.trigger span::before {
 			.letter-spacing();
 			&>a{
 				color: @gray-dark;
-				&:hover{
+				padding-top: 20px;
+				padding-bottom: 20px;
+				@media (min-width: 1200px){
+					padding-bottom: 20px;
+				} 
+				&:hover,
+				&:focus{
 					color: @brand-primary;
 					background: #fff;
 				}
@@ -492,7 +501,7 @@ button.trigger span::before {
 				text-decoration: none;
 				color: @brand-light;
 				padding: 8px 0;
-				display: inline-block;
+				display: block;
 				font-weight: 400;
 				&:hover{
 					color: #fff;
