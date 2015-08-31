@@ -208,7 +208,7 @@ function mto_register_metabox() {
         'id'            => $prefix . 'home_metabox',
         'title'         => __( 'Home Page Meta', 'cmb2' ),
         'object_types'  => array( 'page' ), // Post type
-        'show_on' => array('key'=>'template','value'=>'template-home.php'),
+        'show_on' => array('key'=>'page-template','value'=>'template-home.php'),
         'context'       => 'normal',
         'priority'      => 'high',
         'show_names'    => true, // Show field names on the left
@@ -222,6 +222,27 @@ function mto_register_metabox() {
         'desc'             => 'Enter top section heading...',
         'id'               => $prefix.'home_heading',
         'type'             => 'text',
+    ) );
+
+    $home_meta->add_field( array(
+        'name'             => 'Video Link',
+        'desc'             => 'Enter video page link...',
+        'id'               => $prefix.'video_link',
+        'type'             => 'text',
+    ) );
+
+    $home_meta->add_field( array(
+        'name'             => 'About Link',
+        'desc'             => 'Enter about page link...',
+        'id'               => $prefix.'about_link',
+        'type'             => 'text',
+    ) );
+
+     $home_meta->add_field( array(
+        'name'             => 'Video Background',
+        'desc'             => 'Select video section background image',
+        'id'               => $prefix.'video_image',
+        'type'             => 'file',
     ) );
 
     $hv_meta = new_cmb2_box( array(

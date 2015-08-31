@@ -148,13 +148,14 @@ jQuery(document).ready(function(){
     console.log(topReferenceBox);
     if (topReferenceBox.length > 0) {
         var bottomReferenceBox = jQuery('.footer');
-        var bottomOffLine = jQuery(document).height() - bottomReferenceBox.offset().top - bottomReferenceBox.outerHeight();
-        var topOffLine = topReferenceBox.offset().top + topReferenceBox.outerHeight() - 60;
+        var videoReferenceBox = jQuery('.section_video');
+        var bottomOffLine = jQuery(document).height() - bottomReferenceBox.offset().top - bottomReferenceBox.outerHeight() - videoReferenceBox.offset().top - videoReferenceBox.outerHeight();
+        var topOffLine = topReferenceBox.offset().top + topReferenceBox.outerHeight() - 30;
 
         jQuery('.affix').affix({
             offset: {
             top: topOffLine,
-            bottom: bottomOffLine
+            bottom: jQuery('.section_video').outerHeight(true) + jQuery('.footer').outerHeight(true) + 30
         }
         })
     }
@@ -179,7 +180,7 @@ jQuery(document).ready(function(){
         var toLoad = jQuery(this).attr('href') + ' .js-article > *';
 
         jQuery(area).load(toLoad,function(){
-            
+            jQuery('.modal-body').fitVids();
         });
 
         return false;
