@@ -10,12 +10,12 @@
 
 						<?php if (is_category()) { ?>
 							<h1 class="archive-title h2">
-								<span><?php _e( 'Posts Categorized:', 'bonestheme' ); ?></span> <?php single_cat_title(); ?>
+								<?php single_cat_title(); ?>
 							</h1>
 
 						<?php } elseif (is_tag()) { ?>
 							<h1 class="archive-title h2">
-								<span><?php _e( 'Posts Tagged:', 'bonestheme' ); ?></span> <?php single_tag_title(); ?>
+								<?php single_tag_title(); ?>
 							</h1>
 
 						<?php } elseif (is_author()) {
@@ -57,9 +57,7 @@
 									<div class="titlewrap clearfix">
 										<h1 class="post-title entry-title"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h1>
 										<p class="byline vcard">
-											by <span class="author"><em><?php echo bones_get_the_author_posts_link() ?></em></span> - 
 											<time class="updated" datetime="<?php get_the_time('Y-m-j') ?>"><?php echo get_the_time(get_option('date_format')) ?></time>
-											<span class="sticky-ind pull-right"><i class="fa fa-star"></i></span>
 										</p>
 									</div>
 
@@ -91,7 +89,7 @@
                   <?php emm_paginate(); ?>
 							<?php } else { ?>
 								<nav class="wp-prev-next">
-									<ul class="clearfix">
+									<ul class="pager clearfix">
 										<li class="prev-link"><?php next_posts_link( __( '&laquo; Older Entries', 'bonestheme' )) ?></li>
 										<li class="next-link"><?php previous_posts_link( __( 'Newer Entries &raquo;', 'bonestheme' )) ?></li>
 									</ul>
