@@ -167,7 +167,7 @@ jQuery(document).ready(function(){
         jQuery('body').toggleClass('open-menu');
     })
 
-    jQuery(document).on('click','.js-overlay-link',function(e) {
+    jQuery(document).on('click','.js-overlay-link, .overlay-menu a',function(e) {
         
         e.preventDefault();
 

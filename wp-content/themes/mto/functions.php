@@ -290,45 +290,122 @@ function mto_register_metabox() {
 
 
         $contact_meta->add_group_field( $group_field_id, array(
-            'name' => 'Entry Title',
+            'name' => 'Title',
             'id'   => 'title',
             'type' => 'text',
             // 'repeatable' => true, // Repeatable fields are supported w/in repeatable groups (for most types)
         ) );
 
         $contact_meta->add_group_field( $group_field_id, array(
-            'name' => 'Entry Name',
-            'id'   => 'name',
+            'name' => 'Address',
+            'id'   => 'address',
             'type' => 'text',
             // 'repeatable' => true, // Repeatable fields are supported w/in repeatable groups (for most types)
         ) );
 
         $contact_meta->add_group_field( $group_field_id, array(
-            'name' => 'Entry Telephone',
+            'name' => 'Telephone',
             'id'   => 'telephone',
             'type' => 'text',
             // 'repeatable' => true, // Repeatable fields are supported w/in repeatable groups (for most types)
         ) );
 
         $contact_meta->add_group_field( $group_field_id, array(
-            'name' => 'Entry Mobile',
-            'id'   => 'mobile',
+            'name' => 'Fax',
+            'id'   => 'fax',
             'type' => 'text',
             // 'repeatable' => true, // Repeatable fields are supported w/in repeatable groups (for most types)
         ) );
 
         $contact_meta->add_group_field( $group_field_id, array(
-            'name' => 'Entry Email',
+            'name' => 'Email',
             'id'   => 'email',
             'type' => 'text',
             // 'repeatable' => true, // Repeatable fields are supported w/in repeatable groups (for most types)
         ) );
 
         $contact_meta->add_group_field( $group_field_id, array(
-            'name' => 'Description',
-            'description' => 'Write a short description for this entry',
-            'id'   => 'description',
+            'name' => 'Location',
+            'id'   => 'location',
             'type' => 'textarea_small',
+        ) );
+
+        $values_meta = new_cmb2_box( array(
+            'id'            => $prefix . 'values_metabox',
+            'title'         => __( 'Values Meta', 'cmb2' ),
+            'object_types'  => array( 'page', ), // Post type
+            'show_on'      => array( 'key' => 'id', 'value' => array( 20 ) ),
+            'context'       => 'normal',
+            'priority'      => 'high',
+            'show_names'    => true, // Show field names on the left
+            // 'cmb_styles' => false, // false to disable the CMB stylesheet
+            // 'closed'     => true, // true to keep the metabox closed by default
+        ) );
+
+        $group_field_id = $values_meta->add_field( array(
+            'id'          => $prefix.'values_group',
+            'type'        => 'group',
+            'description' => __( 'Generates reusable form entries', 'cmb' ),
+            'options'     => array(
+                'group_title'   => __( 'Entry {#}', 'cmb' ), // since version 1.1.4, {#} gets replaced by row number
+                'add_button'    => __( 'Add Another Entry', 'cmb' ),
+                'remove_button' => __( 'Remove Entry', 'cmb' ),
+                'sortable'      => true, // beta
+            ),
+        ) );
+
+
+        $values_meta->add_group_field( $group_field_id, array(
+            'name' => 'Title',
+            'id'   => 'title',
+            'type' => 'text',
+            // 'repeatable' => true, // Repeatable fields are supported w/in repeatable groups (for most types)
+        ) );
+
+        $values_meta->add_group_field( $group_field_id, array(
+            'name' => 'Description',
+            'id'   => 'description',
+            'type' => 'text',
+            // 'repeatable' => true, // Repeatable fields are supported w/in repeatable groups (for most types)
+        ) );
+
+        $buttons_meta = new_cmb2_box( array(
+            'id'            => $prefix . 'buttons_metabox',
+            'title'         => __( 'Buttons Meta', 'cmb2' ),
+            'object_types'  => array( 'page', ), // Post type
+            'show_on'      => array( 'key' => 'id', 'value' => array( 22 ) ),
+            'context'       => 'normal',
+            'priority'      => 'high',
+            'show_names'    => true, // Show field names on the left
+            // 'cmb_styles' => false, // false to disable the CMB stylesheet
+            // 'closed'     => true, // true to keep the metabox closed by default
+        ) );
+
+        $group_field_id = $buttons_meta->add_field( array(
+            'id'          => $prefix.'buttons_group',
+            'type'        => 'group',
+            'description' => __( 'Generates reusable form entries', 'cmb' ),
+            'options'     => array(
+                'group_title'   => __( 'Entry {#}', 'cmb' ), // since version 1.1.4, {#} gets replaced by row number
+                'add_button'    => __( 'Add Another Entry', 'cmb' ),
+                'remove_button' => __( 'Remove Entry', 'cmb' ),
+                'sortable'      => true, // beta
+            ),
+        ) );
+
+
+        $buttons_meta->add_group_field( $group_field_id, array(
+            'name' => 'Button Title',
+            'id'   => 'btn_title',
+            'type' => 'text',
+            // 'repeatable' => true, // Repeatable fields are supported w/in repeatable groups (for most types)
+        ) );
+
+        $buttons_meta->add_group_field( $group_field_id, array(
+            'name' => 'Description',
+            'id'   => 'btn_link',
+            'type' => 'file',
+            // 'repeatable' => true, // Repeatable fields are supported w/in repeatable groups (for most types)
         ) );
 
 
