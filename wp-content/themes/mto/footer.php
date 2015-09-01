@@ -9,7 +9,7 @@
             </div>
 
             <div class="col-md-6">
-              <p class="primary_slogan">Reshaping the African timber landscape, sustainably</p>
+              <p class="primary_slogan">"Reshaping the African timber landscape, sustainably."</p>
             </div>
             
             <div class="col-md-3">
