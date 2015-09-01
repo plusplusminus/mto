@@ -1,4 +1,4 @@
-<?php /* Full Width Template */ ?>
+<?php /* Template Name: Full Width */ ?>
 
 <?php get_header(); ?>
 
