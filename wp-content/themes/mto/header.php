@@ -103,6 +103,6 @@
 
 		</header> <?php // end header ?>
 
-		<div id="wrapper" class="wrapper intro-effect-jam3">
+		
 
 	    

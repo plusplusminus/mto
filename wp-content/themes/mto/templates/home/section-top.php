@@ -3,7 +3,7 @@
 <?php global $post; ?>
 
 
-
+	<div id="wrapper" class="wrapper intro-effect-jam3">
 	<header class="header">
 		<div class="bg-img">
 		
@@ -31,7 +31,7 @@
 	</header>
 
 	<button class="trigger" data-info="Scroll to explore"><span>Trigger</span></button>
-	
+	</div>
 	<article class="content">
 
 		
@@ -78,9 +78,9 @@
 
 			<?php endwhile; ?>
 
-			<div class="sidenav affix" >
+			<div id="#scroll-nav" class="sidenav affix hidden-xs hidden-sm" >
 				<h5 class="sidenav_title">Overview</h5>
-				<ul id="scroll-nav" class="sidenav_menu">
+				<ul  class="sidenav_menu">
 					<?php echo $menu_item; ?>
 				</ul>
 			</div>
@@ -103,7 +103,7 @@
 					<?php $link = get_post_meta($tmp,'_ppm_video_link',true); ?>
 					<?php $about_link = get_post_meta($tmp,'_ppm_about_link',true); ?>
 
-					<p><a class="btn btn-link js-overlay-link"  href="<?php echo $link; ?>"><i class="fa fa-play fa-2x"> Watch Our Video</i></a></p>
+					<p><a class="btn btn-link js-overlay-link"  href="<?php echo $link; ?>"><i class="fa fa-play"> Watch Our Video</i></a></p>
 					<p><a class="more_link"  href="<?php echo $about_link; ?>">More about MTO <i class="fa fa-chevron-right"></i></a></p>
 				</div>
 			</div>

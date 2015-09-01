@@ -75,7 +75,10 @@ body {
 .title h1 {
 	color: #fff;
     font-weight: 400;
-    font-size: 2em;
+    font-size: 1em;
+    @media(min-width:@screen-md-min) {
+	    font-size: 2em;
+	}
     margin: 0 auto;
     text-align: center;
     background: #222;
@@ -733,13 +736,24 @@ img.aligncenter{
 .video_inner--content{
 	.btn{
 		color: #fff;
+		font-size: 1em;
 		.fa:before{
-			width: 80px;
-			height: 80px;
 			border: 2px solid #fff;
 			border-radius: 100%;
 			display: inline-block;
-			padding: 22px;
+			width: 40px;
+			height: 40px;
+			padding: 12px;
+			@media(min-width:@screen-md-min) {
+				width: 80px;
+				height: 80px;
+				padding: 22px;
+			}
+		}
+		@media(min-width:@screen-md-min) {
+
+			font-size: 2em;
+
 		}
 		&:hover{
 			color: @brand-primary !important;
@@ -749,7 +763,10 @@ img.aligncenter{
 		}
 	}
 	.more_link{
-		padding: 20px 40px;
+		@media(min-width:@screen-md-min) {
+			padding: 20px 40px;
+		}
+		padding: 10px 20px;
 		border-radius: 20px;
 		border: 2px solid #fff;
 		display: inline-block;
