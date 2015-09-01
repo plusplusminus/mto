@@ -20,7 +20,7 @@
         </div>
       </div>
     </footer>
-  </div>
+
 
   <!-- Modal -->
     <div class="modal fade" id="content-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">

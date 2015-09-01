@@ -136,6 +136,9 @@
     }
     
     if (trigger) {
+        if(('ontouchstart' in window)) {
+            window.addEventListener( 'ontouchstart', scrollPage );
+        } 
         window.addEventListener( 'scroll', scrollPage );
         trigger.addEventListener( 'click', function() { toggle( 'reveal' ); } );
     }
@@ -197,6 +200,6 @@ jQuery(document).ready(function(){
         
         event.preventDefault();
     });
-jQuery("body").scrollspy({target: "#scroll-nav", offset:200});
+jQuery(".content").scrollspy({target: "#scroll-nav", offset:200});
 
 })

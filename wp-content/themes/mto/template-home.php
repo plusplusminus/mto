@@ -6,11 +6,14 @@
 
 <?php get_header(); ?>
 
+
+
 	<?php get_template_part('templates/home/section','top'); ?>
 
 	<?php get_template_part('templates/home/section','content'); ?>
 
 	<?php get_template_part('templates/home/section','overview'); ?>
+
 
 
 	
