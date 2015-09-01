@@ -13,12 +13,17 @@ function ppm_scripts_and_styles() {
     global $wp_styles; // call global $wp_styles variable to add conditional wrapper around ie stylesheet the WordPress way
     if (!is_admin()) {
         
-     
+        wp_register_script( 'home', get_stylesheet_directory_uri() . '/library/js/home.js', array('jquery'), '1.0.8',true);
+
         wp_register_script( 'third-party', get_stylesheet_directory_uri() . '/library/js/third-party.js', array('jquery'), '1.0.8',true);
         
         wp_register_script( 'ppm', get_stylesheet_directory_uri() . '/library/js/ppm.js', array('third-party','jquery'), '1.0.49',true);    
 
         wp_enqueue_script('ppm');
+
+        if (is_home() || is_front_page()) {
+            wp_enqueue_script('home');
+        }
 
       
     }
