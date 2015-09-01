@@ -70,28 +70,6 @@
 							</div>
 						<?php endif; ?>
 
-						<?php $buttons = get_post_meta($post->ID,'_ppm_buttons_group',true); ?>	
-						<?php if (!empty($buttons)) : $count = 0; ?>
-							<div class="buttons">
-							<?php foreach ($buttons as $key => $button) : $count++; ?>
-								<?php $btn_title = $button['btn_title'];?>
-								<?php $btn_link = $button['btn_link'];?>
-									<?php if (!empty($btn_title)) { ?>
-										<a target="_blank" class="download-link" href="<?php echo $btn_link ?>"><?php echo $btn_title;?> <i class="fa fa-file-pdf-o"></i></a>
-						        	<?php };?>
-							<?php endforeach; ?>
-							</div>
-						<?php endif; ?>
-						<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-							 viewBox="0 0 960 560" style="enable-background:new 0 0 960 560;" xml:space="preserve">
-							<style type="text/css">
-								.st0{fill:none;}
-							</style>
-							<image style="overflow:visible;" width="797" height="467" xlink:href="<?php echo the_stylesheet_uri();?>/library/images/companyoverview.png"  transform="matrix(1 0 0 1 82 46)"></image>
-							<a xlink:href="//burjkhalifa.ae/en">
-								<rect id="mtoglobal" x="433" y="167" class="st0" width="209" height="70"/>
-							</a>
-						</svg>
 					</article>
 
 					<?php endwhile; ?>
