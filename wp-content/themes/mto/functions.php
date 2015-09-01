@@ -378,7 +378,7 @@ function mto_register_metabox() {
             'id'            => $prefix . 'buttons_metabox',
             'title'         => __( 'Buttons Meta', 'cmb2' ),
             'object_types'  => array( 'page', ), // Post type
-            'show_on'      => array( 'key' => 'id', 'value' => array( 22 ) ),
+            'show_on'      => array( 'key' => 'page-template', 'value' => 'template-overview.php' ),
             'context'       => 'normal',
             'priority'      => 'high',
             'show_names'    => true, // Show field names on the left
