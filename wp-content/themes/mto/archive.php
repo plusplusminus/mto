@@ -76,7 +76,7 @@
 
 								<footer class="article-footer clearfix">
 									<span class="tags pull-left"><?php printf( '<span class="">' . __( 'in %1$s&nbsp;&nbsp;', 'bonestheme' ) . '</span>', get_the_category_list(', ') ); ?> <?php the_tags( '<span class="tags-title">' . __( '<i class="fa fa-tags"></i>', 'bonestheme' ) . '</span> ', ', ', '' ); ?></span>
-                  					<span class="commentnum pull-right"><a href="<?php comments_link(); ?>"><?php comments_number( '<i class="icon icon-comment"></i> 0', '<i class="fa icon-comment"></i> 1', '<i class="fa icon-comment"></i> %' ); ?></a></span>
+                  					<span class="pull-right"><a class="more_link" href="<?php the_permalink(); ?>">Read more <i class="fa fa-chevron-right"></i></a></span>
                 				</footer> <?php // end article footer ?>
 
 								<?php // comments_template(); // uncomment if you want to use them ?>

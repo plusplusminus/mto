@@ -69,14 +69,14 @@
 					      <?php $trunc_limit = 30; ?>
 
 					      <?php if( '' != get_previous_post() ) { ?>
-					        <li class="previous">
-					          <?php previous_post_link( '<span class="previous-page">%link</span>', __( '<i class="fa fa-caret-left"></i>', 'bones' ) . '&nbsp;' . 'Previous Post' ); ?>
+					        <li class="prev-link">
+					          <?php previous_post_link( '%link', __( '&laquo;', 'bones' ) . '&nbsp;' . 'Previous Post' ); ?>
 					        </li>
 					      <?php } // end if ?>
 
 					      <?php if( '' != get_next_post() ) { ?>
-					        <li class="next">
-					          <?php next_post_link( '<span class="no-previous-page-link next-page">%link</span>', '&nbsp;' . 'Next Post' . '&nbsp;' . __( '<i class="fa fa-caret-right"></i>', 'bones' ) ); ?>
+					        <li class="next-link">
+					          <?php next_post_link( '%link', '&nbsp;' . 'Next Post' . '&nbsp;' . __( '&raquo;', 'bones' ) ); ?>
 					        </li>
 					      <?php } // end if ?>
 
