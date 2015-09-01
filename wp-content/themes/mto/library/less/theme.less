@@ -632,6 +632,28 @@ img.aligncenter{
 	 display: block;
 }
 
+.pager{
+	li{
+		a{
+			border: 2px solid @brand-primary;
+			font-weight: 700;
+			.letter-spacing();
+			&:hover,
+			&:focus{
+				background: #fff;
+				color: darken(@brand-primary, 20%);
+				border-color: darken(@brand-primary, 20%);
+			}
+		}
+		&.prev-link{
+			float: left;
+		}
+		&.next-link{
+			float: right;
+		}
+	}
+}
+
 // Single Page
 .single_page{
 	.content_col{
