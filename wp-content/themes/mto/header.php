@@ -48,7 +48,7 @@
 
 	</head>
 
-	<body data-spy="scroll" data-target="#sidebar-nav" data-offset="20" <?php body_class(); ?>>
+	<body <?php body_class(); ?>>
 		<header class="">
 
 			<nav role="navigation">

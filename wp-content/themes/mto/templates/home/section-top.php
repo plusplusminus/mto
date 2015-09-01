@@ -54,7 +54,7 @@
 		<?php if ( $child_pages->have_posts() ) : $count = 0; ?>
 			<?php $menu_item = ''; ?>
 			<?php while ( $child_pages->have_posts() ) : $child_pages->the_post(); $count++;?>
-			    <?php $menu_item .= '<li class="menu_item"><a href="#page-'.$post->ID.'">'.get_the_title().'</a></li>'; ?>
+			    <?php $menu_item .= '<li class="menu_item"><a class="scrollit" href="#page-'.$post->ID.'">'.get_the_title().'</a></li>'; ?>
 				<div id="page-<?php echo $post->ID;?>" class="section_page">
 					<div class="section_page--inner">
 						<div class="container">
@@ -75,9 +75,9 @@
 
 			<?php endwhile; ?>
 
-			<div id="sidebar-nav" class="sidenav affix" >
+			<div class="sidenav affix" >
 				<h5 class="sidenav_title">Overview</h5>
-				<ul class="sidenav_menu">
+				<ul id="scroll-nav" class="sidenav_menu">
 					<?php echo $menu_item; ?>
 				</ul>
 			</div>

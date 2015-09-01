@@ -459,7 +459,9 @@ button.trigger span::before {
 }
 
 .logo-symbol,.logo-word {
-	float: left;
+	@media(min-width:@screen-md-min) {
+		float: left;
+	}
 }
 
 .navbar-fixed-top{
@@ -485,6 +487,16 @@ button.trigger span::before {
 				&:focus{
 					color: @brand-primary;
 					background: #fff;
+				}
+				padding-left: 20px;
+				padding-right: 20px;
+				@media(min-width:@screen-md-min) {
+					padding-left: 10px;
+					padding-right: 10px;
+				}
+				@media(min-width:@screen-lg-min) {
+					padding-left: 20px;
+					padding-right: 20px;
 				}
 			}
 			&.active>a,
@@ -706,6 +718,22 @@ img.aligncenter{
 		&:hover{
 			border-color: @brand-primary;
 		}
+	}
+}
+
+.section_logo {
+	display: none;
+	.modal & {
+		display: block;
+		margin-bottom: 35px;
+
+	}
+}
+
+.page_article--title {
+	display: block;
+	.modal & {
+		display: none;
 	}
 }
 

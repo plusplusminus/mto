@@ -187,4 +187,16 @@ jQuery(document).ready(function(){
 
     });
 
+     jQuery('.scrollit').on('click',function(event){
+        var jQueryanchor = jQuery(this);
+        
+        
+        jQuery('html, body').stop().animate({
+            scrollTop: jQuery(jQueryanchor.attr('href')).offset().top
+        }, 1500);
+        
+        event.preventDefault();
+    });
+jQuery("body").scrollspy({target: "#scroll-nav", offset:200});
+
 })

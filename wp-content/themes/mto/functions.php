@@ -264,6 +264,73 @@ function mto_register_metabox() {
         'type' => 'oembed',
     ) );
 
+    $contact_meta = new_cmb2_box( array(
+            'id'            => $prefix . 'contact_metabox',
+            'title'         => __( 'Contact Meta', 'cmb2' ),
+            'object_types'  => array( 'page', ), // Post type
+            'show_on'      => array( 'key' => 'page-template', 'value' => 'template-contact.php' ),
+            'context'       => 'normal',
+            'priority'      => 'high',
+            'show_names'    => true, // Show field names on the left
+            // 'cmb_styles' => false, // false to disable the CMB stylesheet
+            // 'closed'     => true, // true to keep the metabox closed by default
+        ) );
+
+        $group_field_id = $contact_meta->add_field( array(
+            'id'          => $prefix.'contact_group',
+            'type'        => 'group',
+            'description' => __( 'Generates reusable form entries', 'cmb' ),
+            'options'     => array(
+                'group_title'   => __( 'Entry {#}', 'cmb' ), // since version 1.1.4, {#} gets replaced by row number
+                'add_button'    => __( 'Add Another Entry', 'cmb' ),
+                'remove_button' => __( 'Remove Entry', 'cmb' ),
+                'sortable'      => true, // beta
+            ),
+        ) );
+
+
+        $contact_meta->add_group_field( $group_field_id, array(
+            'name' => 'Entry Title',
+            'id'   => 'title',
+            'type' => 'text',
+            // 'repeatable' => true, // Repeatable fields are supported w/in repeatable groups (for most types)
+        ) );
+
+        $contact_meta->add_group_field( $group_field_id, array(
+            'name' => 'Entry Name',
+            'id'   => 'name',
+            'type' => 'text',
+            // 'repeatable' => true, // Repeatable fields are supported w/in repeatable groups (for most types)
+        ) );
+
+        $contact_meta->add_group_field( $group_field_id, array(
+            'name' => 'Entry Telephone',
+            'id'   => 'telephone',
+            'type' => 'text',
+            // 'repeatable' => true, // Repeatable fields are supported w/in repeatable groups (for most types)
+        ) );
+
+        $contact_meta->add_group_field( $group_field_id, array(
+            'name' => 'Entry Mobile',
+            'id'   => 'mobile',
+            'type' => 'text',
+            // 'repeatable' => true, // Repeatable fields are supported w/in repeatable groups (for most types)
+        ) );
+
+        $contact_meta->add_group_field( $group_field_id, array(
+            'name' => 'Entry Email',
+            'id'   => 'email',
+            'type' => 'text',
+            // 'repeatable' => true, // Repeatable fields are supported w/in repeatable groups (for most types)
+        ) );
+
+        $contact_meta->add_group_field( $group_field_id, array(
+            'name' => 'Description',
+            'description' => 'Write a short description for this entry',
+            'id'   => 'description',
+            'type' => 'textarea_small',
+        ) );
+
 
 }
 
