@@ -103,7 +103,7 @@
 					<?php $link = get_post_meta($tmp,'_ppm_video_link',true); ?>
 					<?php $about_link = get_post_meta($tmp,'_ppm_about_link',true); ?>
 
-					<p><a class="btn btn-link js-overlay-link"  href="<?php echo $link; ?>"><i class="fa fa-play"> Watch Our Video</i></a></p>
+					<p><a class="btn btn-link js-overlay-link"  href="<?php echo $link; ?>"><i class="fa fa-play"></i> Watch Our Video</a></p>
 					<p><a class="more_link"  href="<?php echo $about_link; ?>">More about MTO <i class="fa fa-chevron-right"></i></a></p>
 				</div>
 			</div>
