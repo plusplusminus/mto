@@ -54,11 +54,11 @@
 						
 				<div class="col-md-4">
 					<div class="thumbnail">
-						<a data-toggle="modal" data-target="#form-modal" href="#">
+						<a data-toggle="modal" data-target="#form-modal" data-title="<?php the_title(); ?>" href="#">
 							<?php the_post_thumbnail('full',array('class' => 'img-responsive')); ?>
 						</a>
 						<div class="caption">
-							<h4><a data-toggle="modal" data-target="#form-modal" href="#"><?php the_title(); ?></a></h4>
+							<h4><a data-toggle="modal" data-target="#form-modal" data-title="<?php the_title(); ?>"  href="#"><?php the_title(); ?></a></h4>
 						</div>
 					</div>
 				</div>

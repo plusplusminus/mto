@@ -61,7 +61,10 @@ body {
 	margin: 0 auto;
 	width: 100%;
 	position: absolute;
-	top: 60%;
+	top: 40%;
+	@media(min-width:@screen-md-min) {
+		top: 60%;
+	}
 	left: 50%;
 	-webkit-transform: translateX(-50%) translateY(-60%);
 	transform: translateX(-50%) translateY(-60%);
@@ -277,12 +280,10 @@ button.trigger span::before {
 .intro-effect-jam3 .header h1 {
 	color: #fff;
 	opacity: 1;
-	.transition(opacity 0.4s)
 }
 
 .intro-effect-jam3.modify .header h1 {
 	opacity: 0;
-	.transition(opacity 0.4s)
 }
 
 .intro-effect-jam3 .header .subline {
@@ -298,7 +299,10 @@ button.trigger span::before {
 	transform: translateX(-50%) translateY(0%);
 	.lead{
 		font-weight: 100;
-		font-size: 1.8em;
+		font-size: 1em;
+		@media(min-width:@screen-md-min) {
+			font-size: 1.8em;
+		}
 	}
 }
 
@@ -436,7 +440,10 @@ button.trigger span::before {
 
 .nav_menu-toggle {
 	position: fixed;
-    top: 20px;
+	top: 10px;
+	@media(min-width:@screen-md-min) {
+    	top: 20px;
+    }
     width: auto;
     z-index: 1300;
     padding: 35px 0;
@@ -464,8 +471,14 @@ button.trigger span::before {
 }
 
 .logo-symbol,.logo-word {
+	img {
+		max-width: 150px;
+	}
 	@media(min-width:@screen-md-min) {
 		float: left;
+		img {
+			max-width: 100%;
+		}
 	}
 }
 
@@ -701,8 +714,11 @@ img.aligncenter{
 	p{
 		margin-bottom: 0px;
 	}
-	.primary_attribution{
-		text-align: right;
+	.primary_attribution,.primary_copy{
+		text-align: center;
+		@media(min-width:@screen-sm-min) {
+			text-align: right;
+		}
 	}
 	.primary_slogan{
 		text-align: center;
