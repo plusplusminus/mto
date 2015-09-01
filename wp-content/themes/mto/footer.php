@@ -9,7 +9,7 @@
             </div>
 
             <div class="col-md-6">
-              <p class="primary_slogan">Reshaping the African timber landscape, sustainably</p>
+              <p class="primary_slogan">"Reshaping the African timber landscape, sustainably."</p>
             </div>
             
             <div class="col-md-3">
@@ -33,6 +33,25 @@
         </div>
       </div>
     </div>
+
+    <!-- Modal Form -->
+      <div class="modal fade" id="form-modal" tabindex="-2" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h3>Product Enquiry</h3>
+            </div>
+            <div class="modal-body">
+              
+              <?php gravity_form( 1, false, false, false, '', true );?>
+            
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
 
     <!-- all js scripts are loaded in library/bones.php -->
     <?php wp_footer(); ?>

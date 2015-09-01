@@ -37,14 +37,14 @@
 								<?php $telephone = $group['telephone'];?>
 								<?php $fax = $group['fax'];?>
 								<?php $email = $group['email'];?>
-								<?php $description = $group['location'];?>
+								<?php $location = $group['location'];?>
 								
 								<a href="#collapse<?php echo $count; ?>" class="list-group-item" data-toggle="collapse" data-parent="#accordion"><span><?php echo $group['title']; ?></span></a>
 								<div id="collapse<?php echo $count; ?>" class="collapse collapse-content-holder">
 						            <div class="collapse-content panel-body">
 						            	<ul class="fa-ul">
 						            		<?php if (!empty($address)) { ?>
-						            	  		<li class="address"><i class="fa-li fa fa-envelope-o"></i> <?php echo $address;?></li>
+						            	  		<li class="address"><i class="fa-li fa fa-envelope"></i> <?php echo $address;?></li>
 						            	  	<?php };?>
 						            	  	<?php if (!empty($telephone)) { ?>
 						            	  		<li class="telephone"><i class="fa-li fa fa-phone"></i> <a href="tel:<?php echo $telephone;?>"><?php echo $telephone;?></a></li>
