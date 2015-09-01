@@ -820,3 +820,92 @@ a.list-group-item{
 		}
 	}
 }
+
+// Gravity Forms
+.gform_wrapper {
+
+	// Form Body
+	.gform_body{
+
+		.gform_fields{
+		
+			.gfield{
+		
+				.gfield_label{
+					margin-bottom: 0px;
+					padding-bottom: 0px;
+					color: @brand-primary;
+				}
+
+				select{
+
+				}
+
+				input[type=text],
+				input[type=email],
+				input[type=tel],
+				input[type=url],
+				textarea{
+					padding: 5px 10px;
+					border:1px solid @gray;
+					border-radius: @border-radius-base;
+					&:active,
+					&:focus{
+						border-color: @brand-primary;
+					}
+				}
+
+				.gfield_radio{
+					li{
+						input[type=radio]{
+
+						}
+					}
+				}
+
+				.gfield_checkbox{
+					li{
+						input[type=checkbox]{
+
+						}
+					}
+				}
+			}
+
+			.gfield_error{
+				.validation_message{
+
+				}
+			}
+		}
+	}
+
+	// Form Footer
+	.gform_footer{
+
+		input[type=submit]{
+			.btn();
+			.btn-link();
+			font-weight: 700;
+			text-transform: uppercase;
+			.letter-spacing();
+			border: 2px solid @brand-primary !important;
+			border-radius: @border-radius-large;
+			&:hover{
+				text-decoration: none;
+			}
+		}	
+	}
+
+	// Validation Error
+	.validation_error{
+
+	}
+}
+
+// Confirmation Message
+.gforms_confirmation_message{
+	font-weight: 700;
+	color: @brand-primary;
+	text-align: center;
+}
