@@ -78,14 +78,14 @@ body {
 .title h1 {
 	color: #fff;
     font-weight: 400;
-    font-size: 1em;
-    @media(min-width:@screen-md-min) {
+    font-size: 1.5em;
+    @media(min-width:@screen-sm-min) {
 	    font-size: 2em;
+		background: #222;
 	}
     margin: 0 auto;
     text-align: center;
-    background: #222;
-	opacity: 0.8;
+    
 }
 
 
@@ -413,7 +413,7 @@ button.trigger span::before {
 .affix-top {
     top: 110px;
     position: absolute;
-    z-index: 9999;
+    z-index: 960;
 }
 .affix-bottom {
   position: absolute;
@@ -435,7 +435,10 @@ button.trigger span::before {
 	background: none;
 	border:none;
 	.pull-right();
-	z-index: 1200;
+	z-index: 900;
+	&:focus {
+		outline: none!important;
+	}
 }
 
 .nav_menu-toggle {
@@ -445,7 +448,7 @@ button.trigger span::before {
     	top: 20px;
     }
     width: auto;
-    z-index: 1300;
+    z-index: 1040;
     padding: 35px 0;
     right: 0;
 }
@@ -454,8 +457,11 @@ button.trigger span::before {
 	position: fixed;
     top: 0;
     width: 100%;
-    z-index: 1100;
-    padding: 35px 0;
+    z-index: 1030;
+    overflow-y: auto;
+    @media(min-width:@screen-md-min) {
+    	padding: 35px 0;
+    }
     .transition(0.8s);
     .translate(0,-100%);
     background: #fff;
@@ -467,6 +473,12 @@ button.trigger span::before {
     .open-menu & {
     	background: #fff;
     	.translate(0,0%);
+    }
+
+    max-height: 400px;
+
+    @media(min-width:@screen-md-min) {
+    	max-height: 100%;
     }
 }
 
@@ -496,8 +508,12 @@ button.trigger span::before {
 			.letter-spacing();
 			&>a{
 				color: @gray-dark;
-				padding-top: 20px;
-				padding-bottom: 20px;
+				padding-top: 10px;
+				padding-bottom: 10px;
+				@media(min-width:@screen-md-min) {
+					padding-top: 20px;
+					padding-bottom: 20px;
+				}
 				@media (min-width: 1200px){
 					padding-bottom: 20px;
 				} 
