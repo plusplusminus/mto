@@ -542,16 +542,45 @@ button.trigger span::before {
 	}
 }
 
+.post-title a{
+	&:hover{
+		text-decoration: none;
+	}
+}
 .more_link{
 	color: #fff;
 	font-weight: 700;
 	text-decoration: none;
 	.letter-spacing();
+	.article-footer  &{
+		color: @brand-primary;
+	}
 	.fa{
 		font-size: @font-size-small;
 	}
 	&:hover{
 		text-decoration: none;
+		.article-footer  &{
+			color: darken(@brand-primary, 10%);
+		}
+	}
+}
+
+.download-link{
+	color: @brand-primary;
+	font-weight: 700;
+	text-decoration: none;
+	padding: 20px;
+	padding: 20px 40px;
+	border-radius: 20px;
+	border: 2px solid @brand-primary;
+	display: inline-block;
+	margin-top: 30px;
+	.letter-spacing();
+	&:hover{
+		text-decoration: none;
+		color: darken(@brand-primary, 10%);
+		border-color: darken(@brand-primary, 10%);
 	}
 }
 
@@ -559,7 +588,8 @@ button.trigger span::before {
 .page_article{
 	padding-bottom: 60px;
 }
-.page_article--title{
+.page_article--title,
+.page-title{
 	.letter-spacing();
 	margin-bottom: 40px;
 }
@@ -616,13 +646,20 @@ img.aligncenter{
 			border-bottom: 1px solid @gray-lighter;
 			color: @gray;
 			.letter-spacing();
+			.contact_widget&{
+				padding: 8px 0;
+			}
 			&:hover{
 				color: @brand-primary;
+				font-weight: 700;
 			}
 			a{
 				display: block;
 				padding: 8px 0; 
 				color: @gray;
+				.contact_widget&{
+					padding: 0px;
+				}
 				&:hover,
 				&:focus{
 					text-decoration: none;
@@ -734,8 +771,52 @@ img.aligncenter{
 
 .page_article--title {
 	display: block;
-	.modal & {
-		display: none;
+}
+
+
+// Contact Collapse
+a.list-group-item{
+	border: none;
+	color: @gray;
+	.letter-spacing();
+	display: list-item;
+	display: block;
+	list-style-position: inside;
+	padding: 2px 0;
+	border-bottom: 1px solid #eee;
+	border-top: 1px solid #eee;
+	&:first-of-type{
+		border-top: none;
+	}
+	&:hover,
+	&:focus{
+		background: #fff;
+		color: @brand-primary;
+		font-weight: 700;
+	}
+	&:before{
+		content: "\2022";
+		font-size: 1.4em;
+		margin-right: 5px;
 	}
 }
 
+.values{
+	padding-left: 0px;
+	.value{
+		border: 1px solid @brand-primary;
+		padding: 10px;
+		border-radius: @border-radius-large;
+		margin-bottom: 20px;
+		&:hover{
+			background: @brand-primary;
+			h4{
+				color: #fff;
+			}
+		}
+		h4{
+			margin-top: 0px;
+			color: @brand-primary;
+		}
+	}
+}

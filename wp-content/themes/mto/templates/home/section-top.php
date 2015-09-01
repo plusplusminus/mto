@@ -41,10 +41,12 @@
 
 		$tmp = $post->ID;
 		$args = array(
-			'order'          => 'ASC',
-			'post_type'      => 'page',
-			'post_parent'    => $post->ID,
+			'order'          	=> 'ASC',
+			'post_type'      	=> 'page',
+			'post_parent'    	=> $post->ID,
 			'posts_per_page'    => -1,
+			'meta_key' 			=> "_ppm_page_home_checkbox",
+			'meta_value' 		=> "on"
 		);
 
 		$child_pages = new WP_Query( $args );
@@ -54,24 +56,25 @@
 		<?php if ( $child_pages->have_posts() ) : $count = 0; ?>
 			<?php $menu_item = ''; ?>
 			<?php while ( $child_pages->have_posts() ) : $child_pages->the_post(); $count++;?>
-			    <?php $menu_item .= '<li class="menu_item"><a class="scrollit" href="#page-'.$post->ID.'">'.get_the_title().'</a></li>'; ?>
-				<div id="page-<?php echo $post->ID;?>" class="section_page">
-					<div class="section_page--inner">
-						<div class="container">
-							<div class="row">
-								<div class="col-md-9 col-md-offset-3">
-									<?php $pageexcerpt = get_post_meta($post->ID,'_ppm_page_excerpt',true); ?>
-									<h3><?php the_title(); ?></h3>
-									<p><?php echo esc_html($pageexcerpt);?></p>
-									<a class="more_link js-overlay-link"  href="<?php the_permalink(); ?>">Find out more <i class="fa fa-chevron-right"></i></a>
+				
+				    <?php $menu_item .= '<li class="menu_item"><a class="scrollit" href="#page-'.$post->ID.'">'.get_the_title().'</a></li>'; ?>
+					<div id="page-<?php echo $post->ID;?>" class="section_page">
+						<div class="section_page--inner">
+							<div class="container">
+								<div class="row">
+									<div class="col-md-9 col-md-offset-3">
+										<?php $pageexcerpt = get_post_meta($post->ID,'_ppm_page_excerpt',true); ?>
+										<h3><?php the_title(); ?></h3>
+										<p><?php echo esc_html($pageexcerpt);?></p>
+										<a class="more_link js-overlay-link"  href="<?php the_permalink(); ?>">Find out more <i class="fa fa-chevron-right"></i></a>
+									</div>
 								</div>
-							</div>
-							<div class="stamp">
-								<?php the_post_thumbnail('full',array('class' => 'img-responsive')); ?>
+								<div class="stamp">
+									<?php the_post_thumbnail('full',array('class' => 'img-responsive')); ?>
+								</div>
 							</div>
 						</div>
 					</div>
-				</div>
 
 			<?php endwhile; ?>
 
