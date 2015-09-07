@@ -72,54 +72,8 @@ function child_sections($sections){
                 'desc'=> __('Select main logo from media gallery', 'ppm'),
                 'default'=>array('url'=>'http://s.wordpress.org/style/images/codeispoetry.png'),
             ),
-            array(
-                'id'=>'footer_logo',
-                'type' => 'media', 
-                'url'=> true,
-                'title' => __('Site Footer Logo', 'ppm'),
-                'compiler' => 'true',
-                //'mode' => false, // Can be set to false to allow any media type, or can also be set to any mime type.
-                'desc'=> __('Select main logo from media gallery', 'ppm'),
-                'default'=>array('url'=>'http://s.wordpress.org/style/images/codeispoetry.png'),
-            ),
         )
     );
-
-
-     $sections[] = array(
-        'icon'          => 'ok',
-        'icon_class'    => 'fa fa-heart',
-        'title'         => __('Social Profiles', 'ppm-framework'),
-        'desc'          => __('<p class="description">Social Network URLS</p>', 'ppm'),
-        'fields' => array(
-            array(
-                        'id'=>'twitter_url',
-                        'type' => 'text',
-                        'title' => __('Twitter', 'redux-framework-demo'),
-                        'desc' => __('Enter your twitter url', 'redux-framework-demo'),
-                        ),  
-            array(
-                        'id'=>'facebook_url',
-                        'type' => 'text',
-                        'title' => __('Facebook', 'redux-framework-demo'),
-                        'desc' => __('Enter your Facebook URL', 'redux-framework-demo'),
-                        ),  
-            array(
-                        'id'=>'pinterest_url',
-                        'type' => 'text',
-                        'title' => __('pinterest', 'redux-framework-demo'),
-                        'desc' => __('Enter your pinterest URL', 'redux-framework-demo'),
-                        ),  
-            array(
-                        'id'=>'instagram_url',
-                        'type' => 'text',
-                        'title' => __('Instagram', 'redux-framework-demo'),
-                        'desc' => __('Enter your Instagram URL', 'redux-framework-demo'),
-                        ),  
-        )
-    );
-
-
 
     
 

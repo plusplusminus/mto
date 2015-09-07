@@ -4,48 +4,80 @@
 		"selected_items":
 		[
 			[
-				"pad",
-				"padding"
+				"page",
+				"page-template"
+			],
+			[
+				"text",
+				"text-transform"
 			],
 			[
 				"te",
-				"text-align"
+				"text-decoration"
+			],
+			[
+				"pad",
+				"padding-bottom"
+			],
+			[
+				"mar",
+				"margin-bottom"
+			],
+			[
+				"ma",
+				"margin-bottom"
+			],
+			[
+				"fon",
+				"font-weight"
+			],
+			[
+				"tex",
+				"text-decoration"
+			],
+			[
+				"bor",
+				"border-top"
+			],
+			[
+				"list-",
+				"list-style-position"
+			],
+			[
+				"border-col",
+				"border-color"
+			],
+			[
+				"in",
+				"inline-block"
+			],
+			[
+				"font",
+				"font-weight"
+			],
+			[
+				"font-s",
+				"font-size-base"
+			],
+			[
+				"ba",
+				"background"
+			],
+			[
+				"lis",
+				"list-style-position"
+			],
+			[
+				"back",
+				"background"
 			],
 			[
 				"bac",
 				"background"
 			],
 			[
-				"mar",
-				"margin-left"
-			],
-			[
-				"bor",
-				"border-bottom"
-			],
-			[
-				"ma",
-				"margin"
-			],
-			[
-				"ba",
-				"background-color"
-			],
-			[
 				"b",
 				"background"
-			],
-			[
-				"font-s",
-				"font-size-large"
-			],
-			[
-				"font",
-				"font-size"
-			],
-			[
-				"fon",
-				"font-size"
 			],
 			[
 				"font-f",
@@ -74,10 +106,6 @@
 			[
 				"box",
 				"box-shadow"
-			],
-			[
-				"in",
-				"inline-block"
 			],
 			[
 				"font-",
@@ -124,10 +152,6 @@
 				"make-md-column"
 			],
 			[
-				"back",
-				"background-color"
-			],
-			[
 				"mak",
 				"make-md-column"
 			],
@@ -143,6 +167,14 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "wp-content/themes/mto/page.php",
+			"settings":
+			{
+				"buffer_size": 3102,
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -185,10 +217,41 @@
 	},
 	"expanded_folders":
 	[
-		"/Users/iaanvn/Sites/mto"
+		"/Users/iaanvn/Sites/MTO",
+		"/Users/iaanvn/Sites/MTO/wp-content",
+		"/Users/iaanvn/Sites/MTO/wp-content/themes",
+		"/Users/iaanvn/Sites/MTO/wp-content/themes/mto",
+		"/Users/iaanvn/Sites/MTO/wp-content/themes/plussed"
 	],
 	"file_history":
 	[
+		"/Users/iaanvn/Sites/MTO/wp-content/themes/mto/404.php",
+		"/Users/iaanvn/Sites/MTO/wp-content/themes/mto/functions.php",
+		"/Users/iaanvn/Sites/MTO/wp-content/themes/mto/library/less/bootstrap/variables.less",
+		"/Users/iaanvn/Sites/MTO/wp-content/themes/mto/library/less/custom-variables.less",
+		"/Users/iaanvn/Sites/MTO/wp-content/themes/mto/archive.php",
+		"/Users/iaanvn/Sites/MTO/wp-content/themes/mto/template-news.php",
+		"/Users/iaanvn/Sites/MTO/wp-config.php",
+		"/Users/iaanvn/Sites/MTO/wp-content/themes/mto/header.php",
+		"/Users/iaanvn/Sites/MTO/wp-content/themes/mto/template-overview.php",
+		"/Users/iaanvn/Sites/MTO/wp-content/themes/mto/library/less/theme.less",
+		"/Users/iaanvn/Sites/MTO/wp-content/themes/mto/single.php",
+		"/Users/iaanvn/Sites/MTO/wp-content/themes/mto/footer.php",
+		"/Users/iaanvn/Sites/MTO/wp-content/themes/mto/library/js/ppm.js",
+		"/Users/iaanvn/Sites/MTO/wp-content/themes/mto/templates/home/section-top.php",
+		"/Users/iaanvn/Sites/mto/wp-content/themes/mto/page.php",
+		"/Users/iaanvn/Sites/mto/wp-content/themes/mto/template-fullwidth.php",
+		"/Users/iaanvn/Sites/mto/wp-content/themes/mto/template-contact.php",
+		"/Users/iaanvn/Sites/mto/wp-content/themes/mto/library/js/ppm.js",
+		"/Users/iaanvn/Sites/mto/wp-content/themes/plussed/page.php",
+		"/Users/iaanvn/Sites/mto/wp-content/themes/mto/sidebar.php",
+		"/Users/iaanvn/Sites/mto/wp-content/themes/mto/functions.php",
+		"/Users/iaanvn/Sites/mto/wp-content/themes/mto/classes/theme-cpt.php",
+		"/Users/iaanvn/Sites/mto/wp-content/themes/mto/header.php",
+		"/Users/iaanvn/Sites/mto/wp-content/themes/mto/templates/home/section-top.php",
+		"/Users/iaanvn/Sites/mto/wp-content/themes/mto/template-header-video.php",
+		"/Users/iaanvn/Sites/mto/wp-content/themes/mto/footer.php",
+		"/Users/iaanvn/Sites/mto/wp-config.php",
 		"/Users/iaanvn/Sites/leandrikers/wp-content/themes/leandrikers/library/less/styleguide/single.less",
 		"/Users/iaanvn/Sites/leandrikers/wp-content/themes/leandrikers/library/less/styleguide/forms.less",
 		"/Users/iaanvn/Sites/leandrikers/wp-content/themes/leandrikers/library/less/theme.less",
@@ -289,20 +352,18 @@
 		"/Users/iaanvn/Sites/CampusKey/prototype/v1/templates/lifestyle.liquid",
 		"/Users/iaanvn/Sites/CampusKey/prototype/v1/templates/layouts/layout.liquid",
 		"/Users/iaanvn/Sites/CampusKey/prototype/v1/templates/index.liquid",
-		"/Users/iaanvn/Sites/CampusKey/prototype/v1/templates/includes/vision.liquid",
-		"/Users/iaanvn/Sites/CampusKey/prototype/v1/models/jumbotron.json",
-		"/Users/iaanvn/Sites/CampusKey/prototype/v1/templates/test.liquid",
-		"/Users/iaanvn/Sites/CampusKey/prototype/v1/templates/includes/feature-item.liquid"
+		"/Users/iaanvn/Sites/CampusKey/prototype/v1/templates/includes/vision.liquid"
 	],
 	"find":
 	{
-		"height": 23.0
+		"height": 35.0
 	},
 	"find_in_files":
 	{
 		"height": 93.0,
 		"where_history":
 		[
+			"/Users/iaanvn/Sites/mto/wp-content/themes/mto",
 			"/Users/iaanvn/Sites/CampusKey/wp-content/themes/campuskey",
 			"/Users/iaanvn/Sites/CampusKey/wp-content/themes",
 			"/Users/iaanvn/Sites/CampusKey/wp-content/themes/campuskey",
@@ -318,6 +379,29 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"fa ",
+			"more-link",
+			"logo",
+			"more",
+			"page",
+			"sidebar",
+			"col-md-4",
+			"sidebar",
+			"side",
+			"modal",
+			"single",
+			"HEAD",
+			"head",
+			" class=\"content_col\"",
+			"li class=\"col-md-6 ",
+			"navbar",
+			"header",
+			"bg-im",
+			"header",
+			"lead",
+			"sidenav",
+			"lead",
+			"subline",
 			"content",
 			"$cite",
 			"<a href=\"",
@@ -422,30 +506,7 @@
 			"templates/section",
 			"news",
 			"faq",
-			"cta",
-			"gravity",
-			"script",
-			"famliy",
-			"blue",
-			"contact",
-			"icon",
-			"descript",
-			"contact",
-			"room",
-			".lifestyle-area",
-			"feature_",
-			"ffd800",
-			"#FFD800",
-			"display-table-cell",
-			"descrip",
-			"slider-text",
-			"find out more",
-			".vertical-ribbon",
-			"room-grid-main",
-			"sidebar",
-			"about-1",
-			"dynamic_sidebar",
-			"font-fa"
+			"cta"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -453,6 +514,8 @@
 		"regex": false,
 		"replace_history":
 		[
+			"",
+			"li class=\"",
 			"@font-family-base",
 			"@font-family-script",
 			"@font-family-base",
@@ -469,6 +532,51 @@
 	},
 	"groups":
 	[
+		{
+			"sheets":
+			[
+			]
+		},
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "wp-content/themes/mto/page.php",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 3102,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								3102
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		},
+		{
+			"sheets":
+			[
+			]
+		},
 		{
 			"sheets":
 			[
@@ -492,16 +600,36 @@
 				0,
 				1,
 				1
+			],
+			[
+				1,
+				0,
+				2,
+				1
+			],
+			[
+				0,
+				1,
+				1,
+				2
+			],
+			[
+				1,
+				1,
+				2,
+				2
 			]
 		],
 		"cols":
 		[
 			0.0,
+			0.933615351382,
 			1.0
 		],
 		"rows":
 		[
 			0.0,
+			0.929478138223,
 			1.0
 		]
 	},
@@ -514,7 +642,7 @@
 	"project": "mto.sublime-project",
 	"replace":
 	{
-		"height": 42.0
+		"height": 64.0
 	},
 	"save_all_on_build": true,
 	"select_file":
